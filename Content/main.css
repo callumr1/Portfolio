@@ -95,6 +95,17 @@ span::selection {
     position: relative;
 }
 
+.social,
+.languages {
+    display: flex;
+}
+
+.social li,
+.languages li {
+    margin-right: 0.5rem;
+    text-align: center;
+}
+
 /* Fixes IE11 bug where these sections overflow the parent container */
 .project-card,
 .gallery-description {
@@ -173,6 +184,48 @@ span::selection {
 
 .project-links a:hover {
     border-bottom: 1.5px solid;
+}
+
+.project-langauges {
+    padding-top: 1rem;
+}
+
+.tag {
+    background: #FFBA49;
+    border-radius: 3px 0 0 3px;
+    color: black;
+    display: inline-block;
+    font-family: "Roboto", "Raleway", sans-serif;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 10px;
+    position: relative;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+}
+
+/*.tag::before {
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    content: '';
+    height: 6px;
+    left: 10px;
+    position: absolute;
+    width: 6px;
+    top: 10px;
+}*/
+
+.tag::after {
+    background: #FFBA49;
+    border-bottom: 13px solid whitesmoke;
+    border-left: 10px solid #FFBA49;
+    border-top: 13px solid whitesmoke;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .gallery {
@@ -296,7 +349,6 @@ span::selection {
 }
 
 .social {
-    display: flex;
     margin-bottom: 1.5rem;
 }
 
