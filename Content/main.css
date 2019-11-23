@@ -1,0 +1,460 @@
+/* 1. Base */
+html {
+    background-color: #12130F;
+    background-image: linear-gradient(to bottom right, #12130F, #077187);
+    background-size: cover;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    min-height: 100vh;
+    min-width: 300px;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: currentColor;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* 2. Shared */
+.wallpaper, 
+.picture-shadow,
+.picture-image {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.title-job, 
+.title-2,
+.title-3,
+.button {
+    font-family: "Roboto", "Raleway", sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.title-job, 
+.title-2,
+.title-3{
+    color: #FFBA49;
+    margin-bottom: 0.5rem;
+}
+
+.button, 
+.social a {
+    transform-origin: center;
+    transition-duration: 100ms;
+}
+
+h1::selection,
+p::selection,
+span::selection {
+    color: #FFBA49;
+    background-color: #12130F;
+}
+
+.name,
+.section-header {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.hr,
+.project-hr {
+    border: none;
+    content: "";
+    transform-origin: center;
+    width: 12rem;
+    text-align: left; /* Required in IE11 as transform-origin does not work */
+}
+
+.gallery-card,
+.project-card,
+.project-image {
+    border-radius: 1.5rem 0 1.5rem 0;
+}
+
+.content-section,
+.footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Fixes IE11 bug where these sections overflow the parent container */
+.project-card,
+.gallery-description {
+    max-width: 100%;
+}
+
+/* 3. Specific */
+.wallpaper {
+    background-image: url("images/background.jfif");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+    position: fixed;
+}
+
+.hero-content {
+    display: flex;
+    position: relative;
+    height: 100vh; /* Makes the hero-content fill centered vertically in IE11 */
+    min-height: 100vh;
+    max-width: 1920px;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    height: 100%; /* Removes unnecessary space below the containers content in IE11 */
+    width: 80%;
+    max-width: 1920px;
+    margin: 4rem;
+}
+
+.project-card {
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+    padding: 1.5rem;
+}
+
+.section-header {
+    border-bottom: #FFBA49 2px solid;
+    color: #FFBA49;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.project-title {
+    color: #077187;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.project-description p {
+    margin: 1rem 0;
+}
+
+.project-description li {
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
+.project-links {
+    color: #077187;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    width: auto;
+}
+
+.project-links a {
+    margin-right: 1rem;
+    padding-bottom: 4px;
+}
+
+.project-links a:hover {
+    border-bottom: 1.5px solid;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%; /* Removes unnecessary space from the gallery div in IE11 */
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.gallery-card{
+    display: flex;
+    align-items: center;
+    width: 22%;
+    height: auto;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.gallery-image {
+    width: 100%; /* Prevents images overflowing the parent div in IE11 */
+}
+
+.float-side {
+    float: right;
+}
+
+.name {
+    line-height: 1.125;
+}
+
+.picture {
+    padding-top: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.picture-shadow {
+    border-radius: 290486px;
+    background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
+    position: absolute;
+    top: 10%;
+}
+
+.picture-image {
+    border-radius: 290486px;
+    position: absolute;
+}
+
+.project-image {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title-job {
+    font-size: 0.90rem;
+}
+
+.title-2 {
+    font-size: 0.80rem;
+}
+
+.title-3 {
+    font-size: 0.70rem;
+}
+
+.hr {
+    background-color: #FFBA49;
+    height: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-hr {
+    background-color: #077187;
+    height: 2px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.description {
+    font-size: 1.2rem;
+}
+
+.contact {
+    display: inline-block;
+    margin-top: 1.5rem;
+    vertical-align: top;
+}
+
+.button {
+    align-items: center;
+    border-radius: 10px 0 10px 0;
+    border: 2px solid #FFBA49;
+    box-shadow: inset 0 0 1em rgba(255, 186, 73, 0.3), 0 0 1em rgba(255, 186, 73, 0.3);
+    color: #FFBA49;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: bold;
+    justify-content: center;
+    line-height: 1;
+    padding: 0.8em 1.6em;
+    text-shadow: none;
+    transition-property: box-shadow, transform;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+}
+
+.button:hover {
+    box-shadow: inset 0 0 0 rgba(255, 186, 73, 0.3), 0 0 1.5em rgba(255, 186, 73, 0.5);
+    background-color: #FFBA49;
+    color: #12130F;
+    transform: scale(1.02) translateY(-4px);
+}
+
+.button:active {
+    box-shadow: inset 0 0 0 rgba(255, 186, 73, 0.3), 0 0 1.5em rgba(255, 186, 73, 0.7);
+    transform: scale(0.98) translateY(-2px);
+}
+
+.social {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.social li {
+    height: 2rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    width: 2rem;
+}
+
+.social a {
+    align-items: center;
+    font-size: 1.5rem;
+    height: 2rem;
+    opacity: 0.5;
+    transition-property: opacity, transform;
+    width: 2rem;
+    will-change: opacity, transform;
+}
+
+.social a:hover {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+.social a:active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.text-spacing {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.button-with-icon-text {
+    padding-left: 10px;
+}
+
+.link-text {
+    padding-left: 0.2rem;
+}
+
+.link {
+    color: #FFBA49;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-text {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+code {
+    font-size: 87.5%;
+    font-family: "Roboto Mono", monospace;
+    color: #e83e8c;
+    word-break: break-word;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1000px) {
+    .float-side {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 3rem;
+    }
+
+    .side {
+        margin-bottom: 9rem;
+        width: 50%;
+    }
+
+    .float-side {
+        width: 30%;
+    }
+
+    .gallery-card {
+        width: 46%;
+        margin: 0.5rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .side {
+        margin-bottom: 3rem;
+        width: 60%;
+    }
+    .gallery-card {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .side {
+        margin-bottom: 3rem;
+        width: 70%;
+    }
+
+    .float-side {
+        float: none;
+        margin: 10px 0;
+        width: auto;
+    }
+
+    .project-image {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .side {
+        margin-bottom: 3rem;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .side {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .hero-content {
+        align-items: center;
+        justify-content: space-around;
+        justify-content: space-evenly;
+        padding: 4rem;
+    }
+    .side {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-left: 4rem;
+        order: 2;
+        width: 20rem;
+    }
+    .about {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}

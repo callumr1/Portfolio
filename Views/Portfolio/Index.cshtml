@@ -1,0 +1,189 @@
+﻿@model IEnumerable<Portfolio.Models.Project>
+
+@{ 
+    ViewBag.Title = "Callum Robertson - Application Developer";
+}
+
+<div id="wallpaper" class="wallpaper" data-image="../Content/images/background.jfif"></div>
+<div id="heroContent" class="hero-content">
+    <aside class="side">
+        <figure id="picture" class="picture">
+            <div class="picture-shadow"></div>
+            <img id="pictureImage" class="picture-image" src="~/Content/images/callum.jpg" srcset="
+                    ~/Content/images/callum.jpg    1x,
+                    ~/Content/images/callum@2x.jpg 2x,
+                    ~/Content/images/callum@3x.jpg 3x" alt="Portrait of Callum Robertson" width="320" height="320" />
+        </figure>
+    </aside>
+    <main class="about">
+        <h1 class="name">Hi, I'm Callum Robertson</h1>
+        <p class="title-job">Application Developer</p>
+        <p class="title-2">
+            <span>Enthusiast Designer</span>
+        </p>
+        <hr class="hr" />
+        <div class="description">
+            <p>
+                I am a Graduate Application Developer at Tafe Queensland currently
+                living in Townsville. I graduated from James Cook University with a
+                Bachelor of Information Technology in March 2019. I achieved an
+                overall GPA of 5.8 and received an Academic Medal - Bachelor
+                Coursework.
+            </p>
+            <p class="text-spacing">
+                During my degree I have studied various subjects including Software
+                Development, Data Mining and Data Analysis, Network Security, and
+                Design Thinking. My goal is to continue to further my knowledge in
+                all fields of study. I developed this site to showcase my skills and
+                interests, projects that I have undertaken throughout the last few
+                years, and to improve my knowledge of web development.
+            </p>
+            <p>
+                I am proficient in HTML, CSS/Sass, JavaScript, jQuery, C#, .Net, and
+                SQL with knowledge in PHP, Python, Java, and Android Development.
+            </p>
+        </div>
+        <div class="contact">
+            <ul class="social">
+                <li>
+                    <a href="https://github.com/callumr1" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/callum-robertson1/" target="_blank" rel="noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/callumr1/" target="_blank" rel="noreferrer"><i class="fab fa-codepen"></i></a>
+                </li>
+                <li>
+                    <a href="https://stackoverflow.com/users/9724409/callumr?tab=profile" target="_blank" rel="noreferrer">
+                        <i class="fab fa-stack-overflow"></i>
+                    </a>
+                </li>
+            </ul>
+            <a class="button" href="mailto:callumrobertson402@gmail.com" rel="noreferrer">
+                <i class="far fa-envelope fa-2x"></i>
+                <span class="button-with-icon-text">Email Me</span>
+            </a>
+        </div>
+    </main>
+</div>
+<div class="content-section">
+    <h1 class="section-header">Projects</h1>
+    @foreach (var project in Model)
+    {
+        <div class="project-card">
+            <main>
+                <h2 class="project-title">@project.Name</h2>
+                <hr class="project-hr" />
+                <aside class="float-side">
+                    <figure>
+                        <img class="project-image" src="~/Content/images/@project.LogoURL" alt="@project.LogoAltText" width="320" />
+                    </figure>
+                </aside>
+                <div class="project-description">
+                    @Html.Raw(project.Content)
+                </div>
+                <div class="project-links">
+                    @if (!string.IsNullOrEmpty(project.GithubURL))
+                    {
+                        <a href="@project.GithubURL" target="_blank" rel="noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span class="link-text">Source Code</span>
+                        </a>
+                    }
+                    @if (!string.IsNullOrEmpty(project.ProjectURL))
+                    {
+                        <a href="@project.ProjectURL" target="_blank" rel="noreferrer">
+                            <i class="fas fa-globe-americas"></i>
+                            <span class="link-text">View Site</span>
+                        </a>
+                    }
+                </div>
+                <div class="project-langauges">
+                    <ul class="languages">
+                        @foreach (var lang in project.Languages)
+                        {
+                            <li class="tag">
+                                @Html.DisplayFor(model => lang)
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </main>
+        </div>
+    }
+</div>
+<div class="content-section">
+    <h1 class="section-header">Designs</h1>
+    <div class="description text-spacing gallery-description">
+        <p>
+            This is a collection of logo designs that I have created over the past year. I am mostly self taught in
+            Adobe Illustrator and Photoshop, which are the two tools I use in my logo design process. Most of the logos
+            below I created as a part of the <a class="link" href="https://twitter.com/thirtylogos">Thirty Logos thirty day logo challenge</a>,
+            which sends fictional design jobs to you daily. A few of the logos were also made for friends, or just out
+            of my own curiosity.
+        </p>
+    </div>
+    <div class="gallery">
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img src="~/Content/images/my-logo.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img src="~/Content/images/space1.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img src="~/Content/images/space2.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img src="~/Content/images/spark-logo.png" alt="My logo" />
+            </figure>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="contact">
+        <ul class="social">
+            <li>
+                <a href="https://github.com/callumr1" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/callum-robertson1/" target="_blank" rel="noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/callumr1/" target="_blank" rel="noreferrer"><i class="fab fa-codepen"></i></a>
+            </li>
+            <li>
+                <a href="https://stackoverflow.com/users/9724409/callumr?tab=profile" target="_blank" rel="noreferrer">
+                    <i class="fab fa-stack-overflow"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Want to get in contact with me? Email me at <a class="link" href="mailto:callumrobertson402@gmail.com">callum.robertson402@gmail.com</a></p>
+    <hr class="hr" />
+    <span class="footer-text">Inspired by <a class="link" href="https://jgthms.com/css-in-44-minutes-ebook/">CSS in 44 minutes</a> by Jeremy Thomas</span>
+    <span class="footer-text">Background Image by <a class="link" href="https://unsplash.com/photos/xC7Ho08RYF4">eberhard grossgasteiger</a> on <a class="link" href="https://unsplash.com/">Unsplash</a></span>
+    <span class="footer-text">Icons by <a class="link" href="https://fontawesome.com/">Font Awesome</a></span>
+</footer>
+<noscript>
+    <style type="text/css">
+        .wallpaper {
+            animation-name: zoomOut;
+        }
+
+        .picture {
+            animation-name: dropIn;
+        }
+    </style>
+</noscript>
