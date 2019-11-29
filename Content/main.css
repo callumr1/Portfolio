@@ -12,6 +12,7 @@ html {
     min-height: 100vh;
     min-width: 300px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -112,6 +113,11 @@ span::selection {
     max-width: 100%;
 }
 
+.project-description a,
+.project-description a:hover {
+    transition: 0.2s;
+}
+
 /* 3. Specific */
 .wallpaper {
     background-image: url("images/background.jfif");
@@ -134,7 +140,7 @@ span::selection {
     height: 100%; /* Removes unnecessary space below the containers content in IE11 */
     width: 80%;
     max-width: 1920px;
-    margin: 4rem;
+    margin: 8rem 4rem 4rem 4rem;
 }
 
 .project-card {
@@ -168,6 +174,18 @@ span::selection {
 .project-description li {
     list-style-type: disc;
     margin-left: 1rem;
+}
+
+.project-description a {
+    color: #077187;
+    text-decoration: underline;
+    padding: 0.1rem;
+}
+
+.project-description a:hover {
+    color: white;
+    background-color: #077187;
+    text-decoration: none;
 }
 
 .project-links {
@@ -205,18 +223,6 @@ span::selection {
     -webkit-transition: color 0.2s;
 }
 
-/*.tag::before {
-    background: whitesmoke;
-    border-radius: 10px;
-    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-    content: '';
-    height: 6px;
-    left: 10px;
-    position: absolute;
-    width: 6px;
-    top: 10px;
-}*/
-
 .tag::after {
     background: #FFBA49;
     border-bottom: 13px solid whitesmoke;
@@ -234,7 +240,7 @@ span::selection {
     height: 100%; /* Removes unnecessary space from the gallery div in IE11 */
     justify-content: space-between;
     width: 100%;
-    margin-top: 4rem;
+    margin: 4rem;
 }
 
 .gallery-card{
@@ -244,9 +250,11 @@ span::selection {
     height: auto;
     background-color: white;
     padding: 0.5rem;
+    margin: 1.5rem 0;
 }
 
 .gallery-image {
+    display: flex;
     width: 100%; /* Prevents images overflowing the parent div in IE11 */
 }
 
@@ -278,6 +286,7 @@ span::selection {
 
 .project-image {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 5px;
 }
 
 .title-job {
@@ -403,7 +412,7 @@ span::selection {
 .footer{
     display: flex;
     justify-content: center;
-    margin: 4rem 0;
+    margin: 4rem 1rem;
     position: relative;
     text-align: center;
     width: 100%;
@@ -419,6 +428,40 @@ code {
     font-family: "Roboto Mono", monospace;
     color: #e83e8c;
     word-break: break-word;
+}
+
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    background-color: transparent;
+    bottom: 20px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    z-index: 100;
+    width: 26px;
+    height: 26px;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+
+/* Specifc Gallery card background colours */
+
+.sparked-logo {
+    background-color: #191919;
+}
+
+.jj-pizza-logo {
+    background-color: #DF4337;
+}
+
+.anchor-logo {
+    background-color: #110C01;
 }
 
 /* Responsiveness */

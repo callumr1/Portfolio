@@ -68,8 +68,9 @@
             </a>
         </div>
     </main>
+    <a id="hero-scroll" class="scroll-down" href="#content-section"></a>
 </div>
-<div class="content-section">
+<div id="content-section" class="content-section">
     <h1 class="section-header">Projects</h1>
     @foreach (var project in Model)
     {
@@ -129,22 +130,62 @@
     <div class="gallery">
         <div class="gallery-card">
             <figure class="gallery-image">
-                <img src="~/Content/images/my-logo.png" alt="My logo" />
+                <img class="lazy" src="~/Content/images/my-logo.png" data-src="/Content/images/my-logo.png" data-srcset="/Content/images/my-logo.png" alt="My logo" />
             </figure>
         </div>
         <div class="gallery-card">
             <figure class="gallery-image">
-                <img src="~/Content/images/space1.png" alt="My logo" />
+                <img class="lazy" src="~/Content/images/space1.png" data-src="/Content/images/space1.png" data-srcset="/Content/images/space1.png" alt="My logo" />
             </figure>
         </div>
         <div class="gallery-card">
             <figure class="gallery-image">
-                <img src="~/Content/images/space2.png" alt="My logo" />
+                <img class="lazy" src="~/Content/images/space2.png" data-src="/Content/images/space2.png" data-srcset="/Content/images/space2.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card sparked-logo">
+            <figure class="gallery-image">
+                <img class="lazy" src="~/Content/images/spark-logo.png" data-src="/Content/images/spark-logo.png" data-srcset="/Content/images/spark-logo.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card jj-pizza-logo">
+            <figure class="gallery-image">
+                <img class="lazy" src="~/Content/images/jj-pizza.png" data-src="/Content/images/jj-pizza.png" data-srcset="/Content/images/jj-pizza.png" alt="My logo" />
             </figure>
         </div>
         <div class="gallery-card">
             <figure class="gallery-image">
-                <img src="~/Content/images/spark-logo.png" alt="My logo" />
+                <img class="lazy" src="~/Content/images/marano.png" data-src="/Content/images/marano.png" data-srcset="/Content/images/marano.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img class="lazy" src="~/Content/images/Paint-logo.png" data-src="/Content/images/Paint-logo.png" data-srcset="/Content/images/Paint-logo.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img class="lazy" src="~/Content/images/Sword&Sheild.png" data-src="/Content/images/Sword&Sheild.png" data-srcset="/Content/images/Sword&Sheild.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img class="lazy" src="~/Content/images/TwitchyRabbit.png" data-src="/Content/images/TwitchyRabbit.png" data-srcset="/Content/images/TwitchyRabbit.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img class="lazy" src="~/Content/images/Ping-logo-1.png" data-src="/Content/images/Ping-logo-1.png" data-srcset="/Content/images/Ping-logo-1.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card">
+            <figure class="gallery-image">
+                <img class="lazy" src="~/Content/images/Ping-logo-2.png" data-src="/Content/images/Ping-logo-2.png" data-srcset="/Content/images/Ping-logo-2.png" alt="My logo" />
+            </figure>
+        </div>
+        <div class="gallery-card anchor-logo">
+            <figure class="gallery-image">
+                <img class="lazy" src="~/Content/images/anchor-logo.png" data-src="/Content/images/anchor-logo.png" data-srcset="/Content/images/anchor-logo.png" alt="My logo" />
             </figure>
         </div>
     </div>
