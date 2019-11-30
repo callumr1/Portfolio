@@ -130,18 +130,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animations.css" />
+    <Content Include="Content\images\anchor-logo.png" />
     <Content Include="Content\images\background.jfif" />
     <Content Include="Content\images\callum%402x.jpg" />
     <Content Include="Content\images\callum%403x.jpg" />
     <Content Include="Content\images\callum%404x.jpg" />
     <Content Include="Content\images\callum.jpg" />
     <Content Include="Content\images\color-logo.png" />
+    <Content Include="Content\images\jj-pizza.png" />
+    <Content Include="Content\images\Marano.png" />
     <Content Include="Content\images\mathwiz.jpg" />
     <Content Include="Content\images\my-logo.png" />
     <Content Include="Content\images\notes-logo.png" />
+    <Content Include="Content\images\Paint-logo.png" />
+    <Content Include="Content\images\password-generator-logo.png" />
+    <Content Include="Content\images\PasswordGenerator.png" />
+    <Content Include="Content\images\Ping-logo-1.png" />
+    <Content Include="Content\images\Ping-logo-2.png" />
     <Content Include="Content\images\space1.png" />
     <Content Include="Content\images\space2.png" />
     <Content Include="Content\images\spark-logo.png" />
+    <Content Include="Content\images\Sword&amp;Sheild.png" />
+    <Content Include="Content\images\TwitchyRabbit.png" />
     <Content Include="Content\main.css" />
     <Content Include="Content\minireset.min.css" />
     <Content Include="Global.asax" />
